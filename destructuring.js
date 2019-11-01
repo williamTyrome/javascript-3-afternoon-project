@@ -22,9 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
-
-
+const {color, make, model, year} = carDetails;
 ////////// PROBLEM 2 //////////
 
 /*
@@ -35,11 +33,17 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  let {firstName, lastName, title} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
+// greeting({
+//   firstName: 'will',
+//   lastName: 'doug',
+//   title: 'blah'
+// })
+
 
 
 
@@ -54,13 +58,14 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
-
+ var totalPopulation = obj => {
+   const {utah, california, texas, arizona} = obj;
+   return (utah + california + texas + arizona)
+  }
 ////////// PROBLEM 4 //////////
 
 /*
-  Write a function called ingredients that will take in an object. 
+  Write a function called ingredients that will take in an object.   
   This object will have 3 properties named carb, fat, and protein. 
   The property values will be strings. 
   Use object destructuring to save the property values to new variables. 
@@ -68,8 +73,11 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+var ingredients = (obj) => {
+  let newArr = ['bread', 'butter', 'beef'];
+  const {carb, fat, protein} = newArr; 
+  return newArr; 
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -86,8 +94,8 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+function largeNumbers ({first, second, third})
+var nums = [1, 2, 3] = largeNumbers;
 
 ////////// PROBLEM 6 //////////
 
@@ -98,5 +106,15 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+var  numberGroups = ([a, b, c]) => {
+  if(a.length > b.length && a.length > c.length){
+    return a;
+  } 
+  else if (b.length > a.length && b.length > c.length){
+    return b;
+  }  
+  else if (c.length > a.length && c.length > b.length){
+    return c;
+  }
+}
 

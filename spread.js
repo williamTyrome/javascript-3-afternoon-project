@@ -18,10 +18,14 @@ let product = {
 }
 
 // code here
-
-
-
-
+// function array(arr, num) {
+//   let newArr = [];
+//   if (num >= 1){
+//     newArr.push([...arr]);
+//     num--;
+//   }
+//   return newArr
+// }
 ////////// PROBLEM 2 //////////
 
 /* Use the spread operator to create a copy of the colors array below.  Name the copy "colorsCopy" */
@@ -30,9 +34,7 @@ let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
 // code here
 
-
-
-
+let colorsCopy = colors.map(0, 0)
 ////////// PROBLEM 3 //////////
 
 /* Here we have an array with 3 numbers, and a function that takes in 3 numbers as arguments.  Invoke addNums, and use the spread operator to pass in the numbers from the numbers array; and store the value to a variable named result */
@@ -44,7 +46,10 @@ function addNums(num1, num2, num3) {
 }
 
 // code here
-
+let allNums = [numbers, addNums]
+for(i = 0; i < allNums.length; i++){
+  
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -54,3 +59,9 @@ let arr1 = ['dog', 'chameleon', 'monkey'];
 let arr2 = ['bear', 'tiger', 'liger'];
 
 // code here
+let combinedArrays = [arr1, arr2];
+for(i = 0; i < combinedArrays.length; i++){
+  for(j = 0; j < combinedArrays.length; j++){
+  }
+}
+console.log(arr1, arr2)

@@ -41,10 +41,12 @@
 
 function showValues( obj ) {
   //Code Here
+  let arr = [ ]
+  for(let key in obj){
+    arr.push(obj[key])
+  }
+  return arr.join('')
 }
-
-
-
 ////////// PROBLEM 2 //////////
 
 /*
@@ -54,9 +56,14 @@ function showValues( obj ) {
 */
 
 //Code Here
-
-
-
+function greaterThan10(obj){
+  for(var key in obj){
+    if(obj[key]>10){
+      obj[key]=0;
+    }
+  }
+  return obj;
+}    
 ////////// PROBLEM 3 //////////
 
 /*
@@ -66,9 +73,12 @@ function showValues( obj ) {
 */
 
 //Code Here
-
-
-
+function double(obj){
+  for(var key in obj){
+    obj[key] = obj[key] * 2;
+  }
+  return obj;
+}
 ////////// PROBLEM 4 //////////
 
 /*
@@ -78,9 +88,18 @@ function showValues( obj ) {
   If the property name starts with an 'sh', concatenate the value to the string variable.
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
-
+function secrets(obj){
+  let emptyStr = "";
+  for(let key in obj){
+    if(key.startsWith("sh")){
+      emptyStr += obj[key];
+    }
+  }
+  return emptyStr;
+}
 //Code Here
-
+// function secrets(){' '}
+// for(secrects)
 
 
 /* 
@@ -89,15 +108,15 @@ function showValues( obj ) {
   Uncomment the example below to see a for in loop deleting all the properties inside an object.
 */
 
-// var deleteAllThethings = {
-//   one: 1,
-//   two: 2,
-//   three: 3
-// }
+var deleteAllThethings = {
+  one: 1,
+  two: 2,
+  three: 3
+}
 
-// for(var key in deleteAllThethings) {
-//   delete deleteAllThethings[key]
-// }
+for(var key in deleteAllThethings) {
+  delete deleteAllThethings[key]
+}
 
 // console.log(deleteAllThethings)
 
@@ -111,8 +130,14 @@ function showValues( obj ) {
 */
 
 //Code Here
-
-
+function removePassword(obj){
+  for(let key in obj){
+    if(key === "password"){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 ////////// PROBLEM 6 //////////
 
@@ -143,7 +168,12 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
+function startsWithKe(obj){
+  for(let key in obj){
+    if(obj[key] = k)
+    return obj
+  }
+}
 
 
 ////////// PROBLEM 8 //////////
